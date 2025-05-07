@@ -1,0 +1,236 @@
+INSERT INTO Miasto (id, nazwa, wojewodztwo) VALUES
+(1, 'Gdañsk', 'Pomorskie'),
+(2, 'Gdynia', 'Pomorskie'),
+(3, 'Sopot', 'Pomorskie'),
+(4, 'Warszawa', 'Mazowieckie'),
+(5, 'Kraków', 'Ma³opolskie'),
+(6, 'Poznañ', 'Wielkopolskie'),
+(7, 'Wroc³aw', 'Dolnoœl¹skie'),
+(8, 'Gniezno', 'Wielkopolskie'),
+(9, 'Lublin', 'Lubelskie'),
+(10, '£ódŸ', '£ódzkie'),
+(11, 'Opole', 'Opolskie'),
+(12, 'Koszalin', 'Zachodniopomorskie'),
+(13, 'Zielona Góra', 'Lubuskie'),
+(14, 'Tarnów', 'Ma³opolskie'),
+(15, 'Radom', 'Mazowieckie'),
+(16, 'Czêstochowa', 'Œl¹skie'),
+(17, 'Rumia', 'Pomorskie');
+
+
+INSERT INTO Opiekun (id, imie, nazwisko, numer_telefonu, adres_email) VALUES
+(1, 'Anna', 'Kowalska', '12345678901', 'anna.kowalska@mail.com'),
+(2, 'Piotr', 'Nowak', '23456789012', 'piotr.nowak@mail.com'),
+(3, 'Marta', 'Wiœniewska', '34567890123', 'marta.wisniewska@mail.com'),
+(4, 'Tomasz', 'Jankowski', '45678901234', 'tomasz.jankowski@mail.com'),
+(5, 'Jan', 'Zieliñski', '56789012345', 'jan.zielinski@mail.com'),
+(6, 'Karolina', 'Lewandowska', '67890123456', 'karolina.lewandowska@mail.com'),
+(7, 'Maciej', 'Wójcik', '78901234567', 'maciej.wojcik@mail.com'),
+(8, 'Katarzyna', 'Kaczmarek', '89012345678', 'katarzyna.kaczmarek@mail.com'),
+(9, 'Micha³', 'Szymañski', '90123456789', 'michal.szymanski@mail.com'),
+(10, 'Ewa', 'Kubiak', '10234567890', 'ewa.kubiak@mail.com'),
+(11, 'Piotr', 'Wróbel', '11123456789', 'piotr.wrobel@mail.com'),
+(12, 'Agnieszka', 'Kosiñska', '12234567890', 'agnieszka.kosinska@mail.com'),
+(13, 'Marek', 'Adamczyk', '13345678991', 'marek.adamczyk@mail.com'),
+(14, 'Justyna', 'Zawisza', '14456789012', 'justyna.zawisza@mail.com'),
+(15, 'Krzysztof', 'Jakubowski', '15567890123', 'krzysztof.jakubowski@mail.com'),
+(16, '£ukasz', 'Piotrowski', '16678901234', 'lukasz.piotrowski@mail.com'),
+(17, 'Monika', 'Laskowska', '17789012345', 'monika.laskowska@mail.com'),
+(18, 'Robert', 'Sikorski', '18890123456', 'robert.sikorski@mail.com'),
+(19, 'Adrian', 'Tomczak', '19901234567', 'adrian.tomczak@mail.com');
+
+
+
+INSERT INTO Zabytek (id, nazwa, znajduje_sie_w, opiekuje_sie) VALUES
+(1, 'Zamek w Pszczynie', 2, 1),
+(2, 'Teatr Wielki w Warszawie', 4, 1),
+(3, 'Stadion Miejski w Poznaniu', 6, 1),
+(4, 'Muzeum Sztuki w £odzi', 10, 1),
+(5, 'Katedra na Wawelu', 5, 1),
+(6, 'Muzeum Wojny', 4, 1),
+(7, 'Muzeum II WŒ w Gdañsku', 1, 1),
+(8, 'Zamek w Kaliszu', 6, 2),
+(9, 'Katedra w Lublinie', 9, 3),
+(10, 'Muzeum Historyczne w Warszawie', 4, 4),
+(11, 'Zamek w Cieszynie', 11, 5),
+(12, 'Park Narodowy Bory Tucholskie', 12, 6),
+(13, 'Teatr w Krakowie', 5, 7),
+(14, 'Muzeum Narodowe', 1, 8),
+(15, 'Muzeum Wroc³awskie', 7, 9),
+(16, 'Rynek w Tarnowie', 14, 10),
+(17, 'Katedra w Radomiu', 15, 11),
+(18, 'Muzeum Ziemi Lubuskiej', 13, 12),
+(19, 'Pa³ac Kultury i Nauki', 4, 13),
+(20, 'Zamek', 17, 14),
+(21, 'Katedra w Poznaniu', 6, 15),
+(22, 'Hala Stulecia we Wroc³awiu', 7, 16),
+(23, 'Stare Miasto w Lublinie', 9, 17),
+(24, 'Zamek w Wroc³awiu', 7, 18),
+(25, 'Zamek Królewski w Warszawie', 4, 19);
+
+
+INSERT INTO Firma_Konserwatorska (id, nazwa, numer_telefonu, adres_email) VALUES
+(1, 'Firma Konserwatorska A', '10123456789', 'kontaktfirmaA@mail.com'),
+(2, 'Firma Konserwatorska B', '11234567890', 'kontaktfirmaB@mail.com'),
+(3, 'Firma Konserwatorska C', '12345678901', 'kontaktfirmaC@mail.com'),
+(4, 'Firma Konserwatorska D', '13456789012', 'kontaktfirmaD@mail.com'),
+(5, 'Firma Konserwatorska E', '14567890123', 'kontaktfirmaE@mail.com'),
+(6, 'Firma Konserwatorska F', '15678901234', 'kontaktfirmaF@mail.com'),
+(7, 'Firma Konserwatorska G', '16789012345', 'kontaktfirmaG@mail.com'),
+(8, 'Firma Konserwatorska H', '17890123456', 'kontaktfirmaH@mail.com'),
+(9, 'Firma Konserwatorska I', '18901234567', 'kontaktfirmaI@mail.com'),
+(10, 'Firma Konserwatorska J', '19012345678', 'kontaktfirmaJ@mail.com');
+
+
+
+INSERT INTO Konserwator (id, imie, nazwisko, zatrudnia) VALUES
+(1, 'Pawe³', 'Kowalczyk', 1),
+(2, 'Andrzej', 'Sikora', 2),
+(3, 'Karol', 'Pawlak', 3),
+(4, 'Barbara', 'Kaczmarek', 4),
+(5, 'Dominik', 'Majewski', 5),
+(6, '£ukasz', 'Czajka', 6),
+(7, 'Monika', 'Wiœniewska', 7),
+(8, 'Jan', 'Mazur', 8),
+(9, 'Zofia', 'Ko³odziej', 9),
+(10, 'Adam', 'Szymañski', 10);
+
+
+INSERT INTO Specjalizacja (id, nazwa) VALUES
+(1, 'Malarstwo'),
+(2, 'RzeŸba'),
+(3, 'Archeologia'),
+(4, 'Konserwacja architektury'),
+(5, 'Wzornictwo'),
+(6, 'Sztuka œredniowieczna'),
+(7, 'Restauracja mebli'),
+(8, 'Konserwacja obrazów'),
+(9, 'Renowacja tkanin'),
+(10, 'Rysunek'),
+(11, 'Fotografia'),
+(12, 'Zabytki militariów'),
+(13, 'Architektura sakralna'),
+(14, 'RzeŸba w drewnie'),
+(15, 'Konserwacja fresków'),
+(16, 'Wzornictwo przemys³owe'),
+(17, 'Zabytki techniki'),
+(18, 'Freski w koœcio³ach'),
+(19, 'Sztuka nowoczesna'),
+(20, 'Malarstwo olejne');
+
+
+INSERT INTO Zlecenie_Konserwacji (id, data_wystawienia, planowana_data_rozpoczecia, planowana_data_zakonczenia, zlecono, wykonuje_konserwacje) VALUES
+(1, '2024-01-10', '2024-02-01', '2024-04-01', 1, 1),
+(2, '2024-03-05', '2024-04-10', '2024-05-10', 2, 1),
+(3, '2024-05-15', '2024-06-01', '2024-07-01', 3, 1),
+(4, '2024-07-20', '2024-08-15', '2024-09-15', 4, 4),
+(5, '2024-09-10', '2024-10-01', '2024-12-01', 5, 5),
+(6, '2024-02-25', '2024-03-01', '2024-06-01', 6, 1),
+(7, '2024-04-14', '2024-05-01', '2024-08-01', 7, 2),
+(8, '2024-06-25', '2024-07-01', '2024-10-01', 8, 3),
+(9, '2024-08-10', '2024-09-01', '2024-12-01', 9, 4),
+(10, '2024-10-15', '2024-11-01', '2025-01-01', 10, 5),
+(11, '2024-02-05', '2024-03-10', '2024-04-10', 11, 6),
+(12, '2024-04-25', '2024-05-15', '2024-06-15', 12, 6),
+(13, '2024-06-05', '2024-07-10', '2024-08-10', 13, 8),
+(14, '2024-08-01', '2024-09-01', '2024-10-01', 14, 1),
+(15, '2024-09-15', '2024-10-01', '2024-11-01', 15, 10),
+(16, '2024-10-05', '2024-11-01', '2025-01-01', 16, 6),
+(17, '2024-03-01', '2024-04-01', '2024-05-01', 17, 1),
+(18, '2024-05-01', '2024-06-01', '2024-07-01', 18, 1),
+(19, '2024-07-15', '2024-08-01', '2024-09-01', 19, 6),
+(20, '2024-09-25', '2024-10-01', '2024-11-01', 20, 5);
+
+
+INSERT INTO Konserwacja (id, data_rozpoczecia, data_zakonczenia, koszt, przypisane_zlecenie) VALUES
+(1, '2024-02-01', '2024-04-01', 15000.00, 1),
+(2, '2024-04-10', '2024-05-10', 20000.00, 2),
+(3, '2024-06-01', NULL, 18000.00, 3),
+(4, '2024-08-15', NULL, 22000.00, 4),
+(5, '2024-10-01', NULL, 16000.00, 5),
+(6, '2024-03-01', NULL, 17000.00, 6),
+(7, '2024-05-01', NULL, 21000.00, 7),
+(8, '2024-07-01', NULL, 19000.00, 8),
+(9, '2024-09-01', NULL, 23000.00, 9),
+(10, '2024-11-01', NULL, 25000.00, 10),
+(11, '2024-01-15', '2024-07-15', 12000.00, 11),
+(12, '2024-02-20', '2024-08-20', 14000.00, 12),
+(13, '2024-04-25', '2024-05-25', 13000.00, 13),
+(14, '2024-06-05', '2024-09-05', 15000.00, 14),
+(15, '2024-08-10', '2024-09-10', 17000.00, 15),
+(16, '2024-09-30', '2024-11-30', 16000.00, 16),
+(17, '2024-11-05', NULL, 18000.00, 17),
+(18, '2024-12-01', NULL, 20000.00, 18),
+(19, '2024-03-15', NULL, 21000.00, 19),
+(20, '2024-05-10', NULL, 22000.00, 20);
+
+
+INSERT INTO Raport_z_Konserwacji (id, data_wystawienia, opis_wykonywanej_pracy, zalecenia, generuje_raport) VALUES
+(1, '2024-04-05', NULL, 'Przemalowanie elewacji', 1),
+(2, '2024-05-15', 'Renowacja rzeŸb na fasadzie', 'Zabezpieczenie przed warunkami atmosferycznymi', 2),
+(3, '2024-06-10', 'Konserwacja architektury', 'Wzmocnienie fundamentów', 3),
+(4, '2024-08-20', 'Odtworzenie dekoracji wnêtrz', NULL, 4),
+(5, '2024-10-10', 'Renowacja murów obronnych', NULL, 5),
+(6, '2024-01-25', 'Renowacja fresków', 'Zabezpieczenie przed wilgoci¹', 6),
+(7, '2024-02-18', 'Renowacja okien w pa³acu', NULL, 7),
+(8, '2024-03-12', 'Renowacja rzeŸb', 'Odœwie¿enie powierzchni', 8),
+(9, '2024-04-17', 'Zabezpieczenie œcian', 'Wzmocnienie konstrukcji', 9),
+(10, '2024-05-22', 'Restauracja tapiserii', 'Usuniêcie plam', 10),
+(11, '2024-06-07', 'Konserwacja witra¿y', NULL, 11),
+(12, '2024-07-02', NULL, 'Zabezpieczenie przed robakami', 12),
+(13, '2024-08-03', 'Zabezpieczenie kamiennych posadzek', 'Usuniêcie rdzy', 13),
+(14, '2024-09-10', 'Renowacja œcian', 'Wzmacnianie fundamentów', 14),
+(15, '2024-10-01', 'Renowacja obrazów', NULL, 15),
+(16, '2024-11-12', 'Zabezpieczenie rzeŸb w parku', NULL, 16),
+(17, '2024-12-01', 'Renowacja malowide³', 'Zabezpieczenie powierzchni', 17),
+(18, '2024-01-10', 'Zabezpieczenie materia³ów budowlanych', NULL, 18),
+(19, '2024-02-08', 'Renowacja kaplicy', 'Wzmacnianie konstrukcji', 19),
+(20, '2024-03-15', NULL, 'Usuwanie plam', 20);
+
+
+INSERT INTO Konserwator_Specjalizacja (konserwator_id, specjalizacja_id) VALUES
+(1, 6),
+(1, 2),
+(1, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(6, 7),
+(8, 8),
+(9, 9),
+(1, 10),
+(1, 11),
+(2, 12),
+(3, 13),
+(3, 14),
+(3, 15),
+(5, 15),
+(7, 10),
+(10,6),
+(9, 2),
+(2, 2);
+
+
+
+INSERT INTO Przeglad_Techniczny (id, data_przeprowadzenia, stan_zabytku, dotyczy) VALUES
+(1, '2024-01-15', 9, 1),
+(2, '2024-02-20', 3, 2),
+(3, '2024-03-25', 7, 3),
+(4, '2024-04-10', 6, 4),
+(5, '2024-05-15', 9, 5),
+(6, '2024-06-10', 8, 6),
+(7, '2024-07-05', 7, 7),
+(8, '2024-08-25', 1, 8),
+(9, '2024-09-10', 5, 9),
+(10, '2024-10-05', 1, 10),
+(11, '2024-11-15', 6, 1),
+(12, '2024-12-01', 2, 12),
+(13, '2024-01-05', 7, 13),
+(14, '2024-02-15', 6, 1),
+(15, '2024-03-01', 4, 15),
+(16, '2024-04-20', 7, 1),
+(17, '2024-05-10', 8, 7),
+(18, '2024-06-25', 9, 18),
+(19, '2024-07-15', 6, 9),
+(20, '2024-08-10', 7, 2);
+

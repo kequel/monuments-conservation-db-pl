@@ -1,0 +1,11 @@
+IF OBJECT_ID('Konserwator_Specjalizacja', 'U') IS NOT NULL DROP TABLE Konserwator_Specjalizacja;
+IF OBJECT_ID('Raport_z_Konserwacji', 'U') IS NOT NULL DROP TABLE Raport_z_Konserwacji;
+IF OBJECT_ID('Konserwacja', 'U') IS NOT NULL DROP TABLE Konserwacja;
+IF OBJECT_ID('Zlecenie_Konserwacji', 'U') IS NOT NULL DROP TABLE Zlecenie_Konserwacji;
+IF OBJECT_ID('Przeglad_Techniczny', 'U') IS NOT NULL DROP TABLE Przeglad_Techniczny;
+IF OBJECT_ID('Zabytek', 'U') IS NOT NULL DROP TABLE Zabytek;
+IF OBJECT_ID('Opiekun', 'U') IS NOT NULL DROP TABLE Opiekun;
+IF OBJECT_ID('Konserwator', 'U') IS NOT NULL DROP TABLE Konserwator;
+IF OBJECT_ID('Firma_Konserwatorska', 'U') IS NOT NULL DROP TABLE Firma_Konserwatorska;
+IF OBJECT_ID('Specjalizacja', 'U') IS NOT NULL DROP TABLE Specjalizacja;
+IF OBJECT_ID('Miasto', 'U') IS NOT NULL DROP TABLE Miasto;
