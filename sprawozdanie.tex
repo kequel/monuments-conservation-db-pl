@@ -79,7 +79,7 @@ numer telefonu & Nie & liczba naturalna 11 cyfrowa & kontaktowy numer telefonu d
 adres e-mail & Nie & ciąg 5-40 znaków zawierający znak "@" i zakończony sekwencją ".com" & kontaktowy adres e-mail do opiekuna \\ \hline
 \end{longtable}
 
-\subsection*{Zabytek}
+\subsection*{\\Zabytek}
 Obejmuje informacje o poszczególnych obiektach zabytkowych, nad którymi sprawowana jest opieka i które mogą wymagać konserwacji. Unikalnym identyfikatorem jest id zabytku. Naturalnym kryterium tożsamości może być unikalna nazwa powszechna zabytku. Zabytek trafia do zbioru w momencie jego uznania jako obiekt zabytkowy. Zabytek nie pozostaje w zbiorze na stałe, usuwany gdy przestaje być uznawany za obiekt zabytkowy.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -88,7 +88,7 @@ id & Tak & liczba naturalna & identyfikator zabytku \\ \hline
 nazwa & Nie & ciąg 3-30 znaków & nazwa powszechna zabytku \\ \hline
 \end{longtable}
 
-\subsection*{Przegląd techniczny}
+\subsection*{\\Przegląd techniczny}
 Gromadzi informacje na temat okresowych kontroli stanu technicznego zabytków, w tym datę przeglądu i ocenę stanu. Głównym kluczem jest id przeglądu. Przegląd techniczny jest dodawany do zbioru w momencie jego wykonania. Przeglądy historyczne pozostają w zbiorze na stałe jako dokumentacja stanu zabytku na przestrzeni czasu.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -98,7 +98,7 @@ data przeprowadzenia & Nie & data z kalendarza gregoriańskiego łącznie z roki
 stan zabytku & Nie & liczba całkowita z przedziału 1-10 & ocena stanu technicznego zabytku w danej skali  \\ \hline
 \end{longtable}
 
-\subsection*{Miasto}
+\subsection*{\\Miasto}
 Przechowuje informacje o miastach, w których znajdują się zabytki objęte opieką. Kluczem głównym jest unikalne id miasta, naturalnym mogłaby być jego nazwa. Miasto zostaje dodane do zbioru w momencie dodania pierwszego zabytku w tym mieście. Miasta nie pozostają w zbiorze na stałe, jeśli wszystkie zabytki w danym mieście zostaną usunięte z bazy (przestaną być obiektami zabytkowymi), usuwane jest także miasto.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -108,7 +108,7 @@ nazwa & Nie & ciąg 3-30 znaków & nazwa miasta w którym znajduje się zabytek 
 województwo & Nie & ciąg 7-19 znaków & nazwa województwa do którego przynależy miasto \\ \hline
 \end{longtable}
 
-\subsection*{Zlecenie konserwacji}
+\subsection*{\\ Zlecenie konserwacji}
 Zawiera informacje o zleceniach konserwacji dla zabytków, wraz z datą wystawienia i planowanymi datami rozpoczęcia oraz zakończenia. Głównym kluczem jest unikalne id zlecenia. Zlecenie konserwacji trafia do zbioru w momencie jego wystawienia. Zlecenia pozostają w zbiorze jako dokumentacja konserwacji, chyba że zostaną anulowane (przed rozpoczęciem prac) - są wtedy usuwane.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -119,7 +119,7 @@ planowana data rozpoczęcia & Nie & data z kalendarza gregoriańskiego łącznie
 planowana data zakończenia & Nie & data z kalendarza gregoriańskiego łącznie z rokiem zapisana w formacie: DD.MM.RRRR  & data określająca zaplanowany moment zakończenia prac \\ \hline
 \end{longtable}
 
-\subsection*{Konserwacja}
+\subsection*{\\Konserwacja}
 Przechowuje informacje o konkretnych działaniach konserwatorskich wykonanych na zabytek, takich jak daty rozpoczęcia, zakończenia i poniesione koszty. Głównym kluczem jest unikalne id konserwacji. Konserwacja jest dodawana do zbioru po rozpoczęciu prac - albo zgodnie ze zleceniem, albo z opóźnieniem. Konserwacje pozostają w zbiorze jako dokumentacja wykonanych prac. Dopóki konserwacja nie jest zakończona - jej atrybut data zakończenia, pozostaje "NULL".  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -130,7 +130,7 @@ data zakończenia & Nie & data z kalendarza gregoriańskiego łącznie z rokiem 
 koszt & Nie & liczba dodatnia z maksymalnie dwoma cyframi po przecinku, domyślnie wyrażona w polskich złotówkach & całkowity koszt konserwacji \\ \hline
 \end{longtable}
 
-\subsection*{Raport z konserwacji}
+\subsection*{\\Raport z konserwacji}
 Obejmuje raporty z wykonanych prac konserwacyjnych, w tym opis działań i zalecenia dotyczące dalszej opieki. Kluczem głównym jest unikalne id raportu. Raport jest dodawany do zbioru po zakończeniu konserwacji. Raporty pozostają w zbiorze jako dokumentacja prac konserwacyjnych, bez usunięcia w przyszłości.   
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -141,7 +141,7 @@ opis wykonywanej pracy & Nie & ciąg do 300 znaków & opis prac konserwacyjnych 
 zalecenia & Nie & ciąg do 300 znaków & zalecenia od konserwatora dla opiekunów oraz przyszłych konserwatorów zabytku dotyczące dalszych działań lub utrzymania zabytku \\ \hline
 \end{longtable}
 
-\subsection*{Konserwator}
+\subsection*{\\Konserwator}
 Przechowuje informacje o osobach zatrudnionych jako konserwatorzy. Kluczem głównym jest unikalne id konserwatora. Konserwator jest dodawany do zbioru w momencie zatrudnienia do wykonania jakiejś konserwacji. Dane konserwatora pozostają w zbiorze, nawet jeśli zakończy pracę, by służyć do potencjalnego sprawdzania historii konserwatorów zabytku.
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -151,7 +151,7 @@ imię & Nie & ciąg 3-30 znaków & imię osoby odpowiedzialnej za prace konserwa
 nazwisko & Nie & ciąg 3-30 znaków & nazwisko osoby odpowiedzialnej za prace konserwacyjne \\ \hline
 \end{longtable}
 
-\subsection*{Firma konserwatorska}
+\subsection*{\\Firma konserwatorska}
 Przechowuje dane firm oferujących usługi konserwatorskie, które zatrudniają konserwatorów. Głównym kluczem jest unikalne id firmy konserwatorskiej. Naturalnym kryterium tożsamości mogłaby być formalna nazwa firmy. Firma konserwatorska trafia do zbioru w momencie, gdy jakiś jej konserwator przeprowadza konserwacje dla instytucji. Firma pozostaje w zbiorze na stałe.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
@@ -171,13 +171,53 @@ id konserwatora & Tak & liczba naturalna & identyfikator konserwatora posiadają
 id specjalizacji & Tak & liczba naturalna & identyfikator specjalizacji posiadanej przez konserwatora \\ \hline
 \end{longtable}
 
-\subsection*{Specjalizacja}
+\subsection*{\\Specjalizacja}
 Rodzaje specjalizacji, które mogą być przypisane konserwatorom, określające ich zakres kompetencji. Głównym kluczem jest unikalne id specjalizacji. Naturalnym kryterium tożsamości może być nazwa specjalizacji. Specjalizacja trafia do bazy gdy dodawany jest jakiś konserwator, który ją posiada. Specjalizacje pozostają w zbiorze na stałe, by podobnie jak konserwatorzy służyć do potencjalnego sprawdzania historii konserwatorów zabytku.  
 \begin{longtable}{|C{3cm}|c|C{4.5cm}|C{5cm}|}
 \hline
 \textbf{Nazwa} & \textbf{Klucz} & \textbf{Typ/Dziedzina} & \textbf{Opis} \\ \hline
 id & Tak & liczba naturalna & identyfikator specjalizacji \\ \hline
 nazwa & Nie & ciąg 3-30 znaków & nazwa specjalizacji, opisująca obszar wiedzy konserwatora \\ \hline
+\end{longtable}
+
+\vspace{16\baselineskip}
+
+\begin{flushleft}
+\section{Opis związków}
+\end{flushleft}
+
+\begin{longtable}{|C{3cm}|C{2cm}|C{2cm}|C{2cm}|C{5cm}|}
+\hline
+\textbf{Nazwa} & \textbf{Zbiór encji 1} & \textbf{Zbiór encji 2} & \textbf{Liczność związku} & \textbf{Opis} \\ \hline
+opiekuje się & Opiekun & Zabytek & 1 : 1..n & 
+Związek przyporządkowuje opiekunów do zabytków, nad którymi sprawują opiekę. Jest możliwość sprawdzenia który opiekun odpowiada za dany zabytek, co jest kluczowe dla zarządzania obiektami zabytkowymi. Związek jest nie jest opcjonalny od żadnej ze stron, ponieważ każdy zabytek musi mieć przypisanego opiekuna, który odpowiada za jego stan i opiekę, a opiekunowie nie posiadający już opieki nad żadnym obiektem są usuwani. Związek powstaje, gdy opiekun zostaje przydzielony do danego zabytku. Może zostać usunięty, gdy opiekun przestanie być odpowiedzialny za opiekę nad tym zabytkiem lub gdy zabytek straci status obiektu zabytkowego.   \\ \hline
+
+przeglądany & Zabytek & Przegląd techniczny & 1 : 0..n &
+Związek przyporządkowuje zabytki do wykonanych przeglądów technicznych, które dokumentują ich stan. Przeglądy są wykonywane wiele razy jednemu zabytkowi, pozwalają planować konserwacje w oparciu o stan techniczny. Związek jest opcjonalny od strony zabytku, ponieważ nie każdy zabytek musi mieć zrobiony przegląd (np. gdy dopiero co został dodany do bazy).  Jest wymagany od strony przeglądu technicznego, ponieważ przegląd musi dotyczyć konkretnego obiektu. Związek powstaje w momencie wykonania przeglądu technicznego zabytku i jest trwale zachowany jako dokumentacja stanu technicznego zabytku w czasie. \\ \hline
+
+znajduje się w & Miasto & Zabytek & 1 : 1..n &
+Związek przyporządkowuje zabytki do miast, w których są zlokalizowane. Pozwala zidentyfikować, gdzie znajduje się dany obiekt. Związek jest wymagany od strony zabytku, ponieważ każdy zabytek musi znajdować się w określonym mieście. Jest również obowiązkowy od strony miasta, ponieważ w bazie nie przechowywane są miasta nie posiadające obiektów zabytkowych. Związek powstaje, gdy zabytek zostaje dodany do bazy. Nie jest zmieniany, ponieważ lokalizacja zabytku się nie zmienia.   \\ \hline
+
+zlecono & Zabytek & Zlecenie konserwacji & 1 : 0..n &
+Związek przyporządkowuje dany zabytek do wszystkich zleceń konserwacji, które jego dotyczą. Dzięki temu wiadomo, które zabytki mają zaplanowane lub przeprowadzone prace konserwatorskie. Związek jest wymagany od strony zlecenia konserwacji, ponieważ każde zlecenie dotyczy konkretnego zabytku. Jest opcjonalny od strony zabytku, ponieważ nie każdy zabytek musi mieć aktualne lub przeszłe zlecenie konserwacji. Związek powstaje, gdy zlecenie konserwacji zostaje wystawione. Związek pozostaje aktywny na stałe jako historia konserwacji.   \\ \hline
+
+przypisane zlecenie & Konserwacja & Zlecenie konserwacji & 0..1 : 1 &
+Związek przyporządkowuje zlecenie konserwacji do konkretnych prac konserwatorskich, które zostały na jego podstawie wykonane.  Związek jest wymagany od strony konserwacji, ponieważ każda konserwacja jest wykonywana na zlecenie, nie jest wymagany od strony zlecenia, ponieważ konserwacja jest dodawana do bazy dopiero w chwili jej rozpoczęcia. Związek powstaje w momencie rozpoczęcia konserwacji na podstawie zlecenia i zostaje zapisany na stałe.   \\ \hline
+
+generuje raport & Konserwacja & Raport z konserwacji & 1 : 0..1 &
+Związek przyporządkowuje konserwację do raportu z konserwacji, który opisują wykonane prace oraz zalecenia dotyczące dalszej opieki nad zabytkiem. Związek jest opcjonalny od strony raportu z konserwacji, ponieważ nie każda konserwacja musi generować raport (mogą być przypadki prostych prac bez raportu lub zaniedbania formalności przez konserwatora). Związek jest jednak wymagany od strony konserwacji, ponieważ każdy raport dotyczy konkretnej konserwacji. Związek powstaje po zakończeniu konserwacji i wygenerowaniu raportu. Zostaje trwale zapisany. \\ \hline
+
+wykonuje konserwację & Zlecenie konserwacji & Konserwator & 1..n : 1 &
+Związek przyporządkowuje zlecenie konserwacji do konserwatora, który jest odpowiedzialny za wykonanie wielu prac (zleceń konserwacji). Związek jest obowiązkowy z obu stron, ponieważ każdy konserwator - jeżeli jest w bazie, przeprowadza lub przeprowadzał jakąś konserwację, a każda konserwacja jest przeprowadzana przez konserwatora. Związek powstaje w momencie przypisania konserwatora do realizacji zlecenia. Związek nie zostaje usunięty. \\ \hline
+
+zatrudnia & Konserwator & Firma konserwatorska & 1..n : 1 &
+Związek przyporządkowuje konserwatorów do firmy konserwatorskiej, która ich zatrudnia. Dzięki temu można śledzić, którzy konserwatorzy są zatrudnieni w danej firmie, co umożliwia zarządzanie zasobami ludzkimi oraz łatwy kontakt z wykonawcami. Od strony firmy konserwatorskiej związek jest obowiązkowy, ponieważ firma konserwatorska nie istnieje w bazie jak nie zatrudnia żadnych konserwatorów. Od strony konserwatora związek jest wymagany, ponieważ każdy konserwator musi być zatrudniony przez jakąś firmę konserwatorską, aby formalnie wykonywać swój zawód. Związek powstaje w momencie, dodania konserwatora do bazy. Związek zostaje usunięty, gdy konserwator zmieni firmę. \\ \hline
+
+posiada specjalizację & Konserwator \_Specjalizacja & Konserwator & 0..n : 1 &
+Związek przyporządkowuje konserwatorów do ich specjalizacji. Dzięki temu można określić, jaką specjalizację posiada dany konserwator i przydzielić mu odpowiednie zadania. Daje informacje o tym, ile specjalizacji ma dany konserwator. Związek jest wymagany od strony Konserwator\_Specjalizacja, ponieważ każda specjalizacja musi być przypisana do konkretnego konserwatora. Z drugiej strony, jest opcjonalny od strony Konserwator, ponieważ konserwator może nie mieć jeszcze przypisanej specjalizacji. Związek powstaje w momencie przypisania specjalizacji konserwatorowi i zostaje trwale zapisany. \\ \hline
+
+posiadający specjalizację & Specjalizacja & Konserwator \_Specjalizacja & 1 : 1..n &
+Związek przyporządkowuje konserwatorów do ich specjalizacji. Dzięki temu można określić, jaką specjalizację posiada dany konserwator i przydzielić mu odpowiednie zadania. Pozwala również sprawdzić ile dostępnych jest konserwatorów o tej specjalizacji. Związek jest wymagany od strony Konserwator\_Specjalizacja, ponieważ każda specjalizacja musi być przypisana do konkretnego konserwatora. Jest obowiązkowy również ze strony specjalizacji, ponieważ nie przechowywane są specjalizację do których nie ma konserwatorów. Związek powstaje w momencie przypisania specjalizacji konserwatorowi i zostaje trwale zapisany. \\ \hline
 \end{longtable}
 
 \end{document}
