@@ -220,4 +220,33 @@ posiadający specjalizację & Specjalizacja & Konserwator \_Specjalizacja & 1 : 
 Związek przyporządkowuje konserwatorów do ich specjalizacji. Dzięki temu można określić, jaką specjalizację posiada dany konserwator i przydzielić mu odpowiednie zadania. Pozwala również sprawdzić ile dostępnych jest konserwatorów o tej specjalizacji. Związek jest wymagany od strony Konserwator\_Specjalizacja, ponieważ każda specjalizacja musi być przypisana do konkretnego konserwatora. Jest obowiązkowy również ze strony specjalizacji, ponieważ nie przechowywane są specjalizację do których nie ma konserwatorów. Związek powstaje w momencie przypisania specjalizacji konserwatorowi i zostaje trwale zapisany. \\ \hline
 \end{longtable}
 
+\vspace{2\baselineskip}
+
+\begin{flushleft}
+\section{Schemat relacyjnej bazy danych}
+
+\textbf{Miasto}(ID, nazwa, województwo) 
+\\
+\textbf{Zabytek}(ID, nazwa, \textit{znajduje\_się\_w REF Miasto}, \textit{opiekuje\_się REF Opiekun}) 
+\\
+\textbf{Opiekun}(ID, imię, nazwisko, numer\_telefonu, adres\_email) 
+\\
+\textbf{Przegląd\_techniczny}(ID, data\_przeprowadzenia, stan\_zabytku, \textit{dotyczy REF Zabytek})  
+\\
+\textbf{Zlecenie\_konserwacji}(ID, data\_wystawienia, planowana\_data\_rozpoczęcia, planowana\_data\_zakończenia, \textit{zlecono REF Zabytek}, \textit{wykonuje\_konserwację REF Konserwator}) 
+\\
+\textbf{Konserwacja}(ID, data\_rozpoczęcia, data\_zakończenia, koszt, \textit{przypisane\_zlecenie REF Zlecenie\_konserwacji}) 
+\\
+\textbf{Raport\_z\_konserwacji}(ID, data\_wystawienia, opis\_wykonywanej\_pracy, zalecenia, \textit{generuje\_raport REF konserwacja}) 
+\\
+\textbf{Firma\_konserwatorska}(ID, nazwa, numer\_telefonu, adres\_email) 
+\\
+\textbf{Konserwator}(ID, imię, nazwisko, \textit{zatrudnia REF Firma\_konserwatorska}) 
+\\
+\textbf{Specjalizacja}(ID, nazwa) 
+\\
+\textbf{Konserwator\_Specjalizacja}(\textit{konserwator\_id REF Konserwator, specjalizacja\_id REF Specjalizacja}) 
+
+\end{flushleft}
+
 \end{document}
